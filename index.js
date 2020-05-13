@@ -26,7 +26,8 @@ parseFloat(req.body.n2);
     var volumeCylinder =
   Math.PI * Math.pow (radCircle, 2) * heightCylinder; 
 // sends the results back to the web page as string
-  res.send("The Area of the Cirle is " + areaCircle.toFixed(2) + " and the Circumference is " + circumCircle.toFixed(2) + ". The volume of the cylinder is "+ volumeCylinder.toFixed(2));
+  res.write("The Area of the Cirle is " + areaCircle.toFixed(2) + " and the Circumference is " + circumCircle.toFixed(2));
+  res.write (".  The volume of the cylinder is "+ volumeCylinder.toFixed(2));
 
 });
 
